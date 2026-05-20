@@ -4,6 +4,15 @@
 
 ---
 
+## Entregables interactivos
+
+| | Enlace |
+|---|---|
+| 📊 **Dashboard** | [Abrir dashboard interactivo](https://htmlpreview.github.io/?https://github.com/PabloJimenezGirardeau/caso-cancer-ia/blob/master/dashboard/index.html) |
+| 🎯 **Presentación** | [Abrir presentación (5 diapositivas)](https://htmlpreview.github.io/?https://github.com/PabloJimenezGirardeau/caso-cancer-ia/blob/master/presentacion/Caso%20Cancer.html) |
+
+---
+
 ## Propuesta del proyecto
 
 La mayoría de los estudios de viabilidad en ML se detienen en la misma pregunta: *¿qué modelo obtiene mejor AUC-ROC?* Este proyecto parte de una pregunta distinta y más útil:
