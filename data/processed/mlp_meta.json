@@ -1,0 +1,9 @@
+{
+  "threshold_optimal": 0.6999999999999996,
+  "best_val_auc": 0.8307221531867981,
+  "best_epoch": 9,
+  "total_epochs": 21,
+  "val_f1": 0.5561822125813449,
+  "val_brier": 0.17144079506397247,
+  "n_params": 17665
+}

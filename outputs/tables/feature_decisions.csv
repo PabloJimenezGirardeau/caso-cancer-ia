@@ -1,0 +1,37 @@
+variable,bloque,tipo,señal,decisión,justificación
+glucosa,bioquímica,continua,r=0.2023,✅ Incluir,Factor de riesgo: umbral >130 en modelo generativo
+hemoglobina,bioquímica,continua,r=0.0952,✅ Incluir,Marcador de riesgo: umbral <11 en modelo generativo
+leucocitos,bioquímica,continua,r=0.1319,✅ Incluir,Inflamación crónica: umbral >10 en modelo generativo
+colesterol,bioquímica,continua,r=0.1265,✅ Incluir,Señal débil pero sin leakage
+trigliceridos,bioquímica,continua,r=0.1549,✅ Incluir,Señal débil pero sin leakage
+plaquetas,bioquímica,continua,r=0.0043,✅ Incluir,Señal mínima; se mantiene por completitud
+creatinina,bioquímica,continua,r=0.0000,✅ Incluir,Señal mínima; se mantiene por completitud
+mut_BRCA1,genética,binaria,chi²=2389,✅ Incluir,Mayor peso en modelo generativo (+2.0)
+mut_TP53,genética,binaria,chi²=1751,✅ Incluir,Segundo mayor peso (+1.8)
+mut_KRAS,genética,binaria,chi²=1386,✅ Incluir,Peso +1.4 en modelo generativo
+mut_EGFR,genética,binaria,chi²=496,✅ Incluir,Peso +1.0 en modelo generativo
+mut_PIK3CA,genética,binaria,chi²=229,✅ Incluir,Peso +0.8 en modelo generativo
+mut_BRAF,genética,binaria,chi²=114,✅ Incluir,Peso +0.6 en modelo generativo
+mut_ALK,genética,binaria,chi²=0,❌ Excluir,"Chi²=0.0, p=0.93 — señal estadísticamente nula"
+fumador,hábitos,binaria,chi²=2348,✅ Incluir,Tercer mayor peso (+1.5); OR=2.40
+actividad_fisica,hábitos,categórica,—,✅ Incluir*,Factor protector causal; codificar ordinal
+alcohol,hábitos,binaria,—,❌ Excluir,Constante (100% = 1) — cero varianza
+vive,hábitos,binaria,chi²=6274,❌ Excluir,Consecuencia del diagnóstico — leakage temporal
+obesidad,clínica,binaria,chi²=1954,✅ Incluir,Peso +1.1; OR=2.21 — correlación causal real
+hipertension,clínica,binaria,chi²=507,✅ Incluir,Peso +0.5 en modelo generativo
+diabetes,clínica,binaria,chi²=288,✅ Incluir,Comorbilidad asociada; correlación causal
+enfermedad_cardiaca,clínica,binaria,chi²=8,✅ Incluir,Señal débil pero sin leakage
+epoc,clínica,binaria,chi²=48,✅ Incluir,Señal débil pero sin leakage
+asma,clínica,binaria,chi²=0,⚠️ Opcional,"Chi²=0.4, p=0.52 — señal casi nula"
+edad,sociodem.,continua,r=0.0837,✅ Incluir,Peso +0.4; proxy de riesgo acumulado
+nivel_educativo,sociodem.,categórica,—,⚠️ Opcional,Sin señal real en dataset sintético (~19.3% en todas las categorías)
+nivel_ingresos,sociodem.,categórica,—,⚠️ Opcional,Sin señal real en dataset sintético
+zona,sociodem.,categórica,—,⚠️ Opcional,Sin señal real en dataset sintético
+estado_civil,sociodem.,categórica,—,⚠️ Opcional,Sin señal real en dataset sintético
+num_hijos,sociodem.,continua,r=0.0001,⚠️ Opcional,Pearson r < 0.004 — señal casi nula
+distancia_hospital_km,sociodem.,continua,r=0.0054,⚠️ Opcional,Pearson r < 0.004 — señal casi nula
+coste_total,económico,continua,—,❌ Excluir,Consecuencia del diagnóstico — leakage severo
+coste_farmaco,económico,continua,—,❌ Excluir,Consecuencia del diagnóstico — leakage severo
+num_ingresos,económico,entero,—,❌ Excluir,Consecuencia del diagnóstico — leakage severo
+dias_hospital,económico,entero,—,❌ Excluir,Consecuencia del diagnóstico — leakage severo
+tipo_seguro,económico,categórica,—,❌ Excluir,Variable administrativa sin relación causal verificable

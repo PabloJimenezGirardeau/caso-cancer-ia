@@ -1,0 +1,32 @@
+# Entorno Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.egg-info/
+.env
+venv/
+env/
+
+# Modelos entrenados (regenerables con los notebooks)
+models/
+
+# Arrays grandes de numpy (regenerables con notebook 04)
+data/processed/X_train.npy
+data/processed/X_test.npy
+data/processed/y_train.npy
+data/processed/y_test.npy
+data/processed/test_index.npy
+data/processed/df_master.parquet
+data/processed/df_engineered.parquet
+data/processed/X_train_raw.parquet
+data/processed/X_test_raw.parquet
+
+# Dashboard duplicado
+dashboard/index_standalone.html
+
+# Scripts de construccion temporales (opcionales)
+redesign_s1.py
+
+# OS
+.DS_Store
+Thumbs.db
