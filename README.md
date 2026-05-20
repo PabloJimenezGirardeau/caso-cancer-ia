@@ -8,8 +8,8 @@
 
 | | Enlace |
 |---|---|
-| 📊 **Dashboard** | [Abrir dashboard interactivo](https://PabloJimenezGirardeau.github.io/caso-cancer-ia/dashboard/index.html) |
-| 🎯 **Presentación** | [Abrir presentación (5 diapositivas)](https://PabloJimenezGirardeau.github.io/caso-cancer-ia/presentacion/Caso%20Cancer.html) |
+| 📊 **Dashboard** | [Abrir dashboard interactivo](https://pablojimenezgirardeau.github.io/caso-cancer-ia/dashboard/index.html) |
+| 🎯 **Presentación** | [Abrir presentación (5 diapositivas)](https://pablojimenezgirardeau.github.io/caso-cancer-ia/presentacion/Caso%20Cancer.html) |
 
 ---
 
